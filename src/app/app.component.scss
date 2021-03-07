@@ -6,6 +6,9 @@
   flex-flow: row wrap;
 
   .image {
+    @media (max-width: 768px) {
+      display: none;
+    }
     width: 50%;
     background-color: #a9c5ba;
     text-align: center;
@@ -49,7 +52,12 @@
   }
 
   .content {
-    width: 50%;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+    @media (min-width: 768px) {
+      width: 50%;
+    }
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;

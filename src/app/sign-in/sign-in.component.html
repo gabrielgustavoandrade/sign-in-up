@@ -1,21 +1,59 @@
 <h3>Welcome to Invision</h3>
 
-<form>
+<form [formGroup]="signInForm" (ngSubmit)="onSubmit()" novalidate>
   <div class="group">
     <label for="email">User name or Email</label>
     <br />
-    <input type="email" name="email" />
+    <input
+      id="email"
+      type="email"
+      name="email"
+      formControlName="email"
+      required
+    />
+    <div
+      *ngIf="
+        signInForm.controls['email'].invalid &&
+        (signInForm.controls['email'].dirty ||
+          signInForm.controls['email'].touched)
+      "
+      class="alert"
+    >
+      <div *ngIf="signInForm.controls['email'].errors.required">
+        Email is required.
+      </div>
+      <div *ngIf="signInForm.controls['email'].errors.email">
+        Insert a valid email.
+      </div>
+    </div>
   </div>
   <div class="group">
     <label for="password">Password</label>
     <br />
-    <input type="password" name="password" />
+    <input
+      type="password"
+      name="password"
+      formControlName="password"
+      required
+    />
+    <div
+      *ngIf="
+        signInForm.controls['password'].invalid &&
+        (signInForm.controls['password'].dirty ||
+          signInForm.controls['password'].touched)
+      "
+      class="alert"
+    >
+      <div *ngIf="signInForm.controls['password'].errors.required">
+        Password is required.
+      </div>
+    </div>
   </div>
   <div class="forgot-pass">
     <button>Forgot password?</button>
   </div>
   <div class="sign-in">
-    <button>Sign in</button>
+    <input type="submit" value="Sign in" [disabled]="!signInForm.valid"/>
   </div>
 </form>
 
