@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "sign-in-up"
+  "defaultProject": "sign-in-up",
+  "cli": {
+    "analytics": false
+  }
 }
