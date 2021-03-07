@@ -1,1 +1,45 @@
-<p>sign-up works!</p>
+<h3>Getting Started</h3>
+
+<form>
+  <div class="group">
+    <label for="name">Full Name</label>
+    <br />
+    <input type="text" name="name" />
+  </div>
+  <div class="group">
+    <label for="email">Users name or Email</label>
+    <br />
+    <input type="email" name="email" />
+  </div>
+  <div class="group">
+    <label for="password">Create Password</label>
+    <br />
+    <input type="password" name="password" />
+  </div>
+  <div class="sign-up">
+    <button>Sign up</button>
+  </div>
+</form>
+
+<div class="divisor">
+  <div class="line"></div>
+  <label>Or</label>
+  <div class="line"></div>
+</div>
+
+<div class="sign-up-google">
+  <button>Sign up with Google</button>
+</div>
+
+<div>
+  <label>By signing up, you agree to Invision</label>
+  <br />
+  <a routerLinkActive="active">Terms of Conditions</a>
+  <labe> and </labe>
+  <a routerLinkActive="active">Privacy Policy</a>
+</div>
+
+<div>
+  <label for="sign-up">Already on Invision?</label>
+  <a routerLink="/sign-in" routerLinkActive="active">Log in</a>
+</div>
