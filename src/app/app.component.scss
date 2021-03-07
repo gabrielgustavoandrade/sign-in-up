@@ -1,0 +1,17 @@
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+
+  .image {
+    width: 50%;
+    background-color: #a9c5ba;
+    text-align: center;
+  }
+
+  .content {
+    width: 50%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}

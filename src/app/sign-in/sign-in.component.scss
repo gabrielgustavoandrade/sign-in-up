@@ -1,0 +1,49 @@
+.form {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.group {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  input {
+    width: 100%;
+  }
+  label {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.forgot-pass {
+  display: inline-block;
+  text-align: right;
+  width: 50%;
+}
+
+.sign-in {
+  button {
+    background-color: #707070;
+  }
+}
+
+.divisor {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .line {
+    height: 1px;
+    background: #707070;
+    margin-top: 10px;
+  }
+}
+
+.sign-in-google {
+  margin-top: 10px;
+}
