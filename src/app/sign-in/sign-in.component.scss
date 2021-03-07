@@ -1,3 +1,7 @@
+h3 {
+  font-family: Mulish;
+}
+
 .form {
   margin-top: auto;
   margin-bottom: auto;
@@ -8,6 +12,7 @@
   margin-right: auto;
   width: 50%;
   font-size: 14px;
+  margin-top: 18px;
 
   input {
     width: 100%;
@@ -24,36 +29,86 @@
     width: 100%;
     color: #707070;
   }
-  
 }
 
 .forgot-pass {
   display: inline-block;
   text-align: right;
   width: 50%;
+
+  button {
+    border: none;
+    background: transparent;
+    color: #707070;
+    font-size: 14px;
+    letter-spacing: 0px;
+    opacity: 1;
+    font-family: Mulish;
+  }
 }
 
 .sign-in {
   button {
-    background-color: #707070;
+    background: #707070 0% 0% no-repeat padding-box;
+    border-radius: 100px;
+    opacity: 1;
+    color: #ffffff;
+    border: none;
+    width: 10vw;
+    height: 8vh;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0px;
   }
 }
 
 .divisor {
-  margin-top: 25px;
   display: grid;
   grid-template-columns: 45% 10% 45%;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 7vh;
+  color: #707070;
+  font-family: Mulish;
 
   .line {
     height: 1px;
     background: #707070;
-    margin-top: 10px;
+    margin-top: 2.5vh;
   }
 }
 
 .sign-in-google {
-  margin-top: 10px;
+  margin-top: 7vh;
+  margin-bottom: 7vh;
+
+  button {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 100px;
+    opacity: 1;
+    border: none;
+    font-size: 16px;
+    font-family: Lato;
+    letter-spacing: 0px;
+    color: #000000;
+    width: 12vw;
+    height: 7vh;
+
+    img {
+      height: 4vh;
+      width: 4vh;
+      margin-right: 3vh;
+      margin-top: 1vh;
+    }
+  }
+}
+
+.sign-up {
+  font-family: Mulish;
+
+  a {
+    color: #A9C5BA;
+  }
 }
