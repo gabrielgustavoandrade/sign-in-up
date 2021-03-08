@@ -16,10 +16,19 @@ export class SignInComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(localStorage.getItem('user'));
+  }
 
   onSubmit(): void {
-    console.warn('Your order has been submitted', this.signInForm.value);
-    this.signInForm.reset();
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (
+      user.email === this.signInForm.value.email ||
+      user.name === this.signInForm.value.email
+    ) {
+      if (user.password === this.signInForm.value.password) {
+        alert('Successfully logged in.');
+      } else alert('Maybe you missed your password.');
+    } else alert('Looks like your email are wrong.')
   }
 }

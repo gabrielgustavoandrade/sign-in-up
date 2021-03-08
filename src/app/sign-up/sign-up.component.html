@@ -1,23 +1,65 @@
 <h3>Getting Started</h3>
 
-<form>
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
   <div class="group">
     <label for="name">Full Name</label>
     <br />
-    <input type="text" name="name" />
+    <input id="name" type="text" name="name" formControlName="name" required/>
+    <div
+      *ngIf="
+        signUpForm.controls['name'].invalid &&
+        (signUpForm.controls['name'].dirty ||
+          signUpForm.controls['name'].touched)
+      "
+      class="alert"
+    >
+      <div *ngIf="signUpForm.controls['name'].errors.required">
+        Name is required.
+      </div>
+    </div>
   </div>
   <div class="group">
     <label for="email">Users name or Email</label>
     <br />
-    <input type="email" name="email" />
+    <input id="email" type="email" name="email" formControlName="email" required />
+    <div
+      *ngIf="
+        signUpForm.controls['email'].invalid &&
+        (signUpForm.controls['email'].dirty ||
+          signUpForm.controls['email'].touched)
+      "
+      class="alert"
+    >
+      <div *ngIf="signUpForm.controls['email'].errors.required">
+        Email is required.
+      </div>
+      <div *ngIf="signUpForm.controls['email'].errors.email">
+        Insert a valid email.
+      </div>
+    </div>
   </div>
   <div class="group">
     <label for="password">Create Password</label>
     <br />
-    <input type="password" name="password" />
+    <input id="password" type="password" name="password" formControlName="password" required />
+    <div
+      *ngIf="
+        signUpForm.controls['password'].invalid &&
+        (signUpForm.controls['password'].dirty ||
+          signUpForm.controls['password'].touched)
+      "
+      class="alert"
+    >
+      <div *ngIf="signUpForm.controls['password'].errors.required">
+        Password is required.
+      </div>
+      <div *ngIf="signUpForm.controls['password'].hasError('minlength')">
+        Password must have at least 6 characters
+      </div>
+    </div>
   </div>
   <div class="sign-up">
-    <button>Sign up</button>
+    <input type="submit" value="Sign up" [disabled]="!signUpForm.valid"/>
   </div>
 </form>
 
